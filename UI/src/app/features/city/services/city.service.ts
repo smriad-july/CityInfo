@@ -9,26 +9,28 @@ import { City } from '../models/city.model';
 })
 export class CityService {
 
+  private readonly apiUrl = 'https://localhost:7156/api/cities';
   constructor(private http: HttpClient) { }
 
   addCity(addCityRequest: AddCityRequest): Observable<AddCityRequest> {
-    return this.http.post<AddCityRequest>('https://localhost:7156/api/cities',addCityRequest);
+    return this.http.post<AddCityRequest>(this.apiUrl,addCityRequest);
   }
 
   getAllCities(): Observable<City[]>{
-    return this.http.get<City[]>(`https://localhost:7156/api/cities`)
+    
+      return this.http.get<City[]>(this.apiUrl);
   }
 
   getCity(id: number): Observable<City>{
-    return this.http.get<City>(`https://localhost:7156/api/cities/`+id);
+    return this.http.get<City>(`${this.apiUrl}/`+id);
 
   }
 
   updateCity(id: number, updateCityRequest: City): Observable<City>{
-    return this.http.put<City>(`https://localhost:7156/api/cities/`+id, updateCityRequest);
+    return this.http.put<City>(`${this.apiUrl}/`+id, updateCityRequest);
   }
 
   deleteCity(id: number): Observable<City>{
-    return this.http.delete<City>(`https://localhost:7156/api/cities/`+id);
+    return this.http.delete<City>(`${this.apiUrl}/`+id);
   }
 }

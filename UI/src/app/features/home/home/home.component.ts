@@ -9,7 +9,7 @@ import { searchReturn } from '../models/home.models';
 })
 export class HomeComponent implements OnInit{
 
-  searchObj: string = '';
+  searchObj: string | null = null;
 
   searchReturnObj: searchReturn[] = [];
 
