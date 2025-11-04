@@ -26,13 +26,11 @@ namespace CityInfo.API.Migrations
                 oldClrType: typeof(string),
                 oldType: "nvarchar(max)");
 
-            migrationBuilder.AlterColumn<string>(
+            migrationBuilder.AddColumn<string>(
                 name: "admin",
                 table: "Users",
                 type: "nvarchar(max)",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(max)");
+                nullable: true);
 
             migrationBuilder.AlterColumn<string>(
                 name: "Description",

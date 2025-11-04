@@ -26,7 +26,6 @@ namespace CityInfo.API.Entities
 
         public string lastName { get; set; }
 
-        public string admin {  get; set; }
         public string token { get; set; }
 
 

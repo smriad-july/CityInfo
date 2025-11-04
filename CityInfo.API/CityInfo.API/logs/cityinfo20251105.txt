@@ -1,0 +1,22 @@
+2025-11-05 00:04:47.469 +06:00 [DBG] Connection id "0HNGRP86HKGOB" received FIN.
+2025-11-05 00:04:47.500 +06:00 [DBG] Connection id "0HNGRP86HKGOB" is closed. The last processed stream ID was 53.
+2025-11-05 00:04:47.504 +06:00 [DBG] The connection queue processing loop for 0HNGRP86HKGOB completed.
+2025-11-05 00:04:47.505 +06:00 [DBG] Connection id "0HNGRP86HKGOB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-05 00:04:47.523 +06:00 [DBG] Connection id "0HNGRP86HKGOB" stopped.
+2025-11-05 00:30:46.736 +06:00 [DBG] Connection id "0HNGRP86HKGOD" accepted.
+2025-11-05 00:30:46.751 +06:00 [DBG] Connection id "0HNGRP86HKGOD" started.
+2025-11-05 00:30:46.762 +06:00 [DBG] Connection 0HNGRP86HKGOD established using the following protocol: "Tls13"
+2025-11-05 00:30:46.785 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7156/api/cities//pointsofinterest - null null
+2025-11-05 00:30:46.803 +06:00 [DBG] The request path  does not match the path filter
+2025-11-05 00:30:46.805 +06:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2025-11-05 00:30:46.807 +06:00 [INF] CORS policy execution successful.
+2025-11-05 00:30:46.808 +06:00 [DBG] No candidates found for the request path '/api/cities//pointsofinterest'
+2025-11-05 00:30:46.810 +06:00 [DBG] Request did not match any endpoints
+2025-11-05 00:30:46.814 +06:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-11-05 00:30:46.821 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7156/api/cities//pointsofinterest - 404 0 null 36.4785ms
+2025-11-05 00:30:46.833 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7156/api/cities//pointsofinterest, Response status code: 404
+2025-11-05 00:34:47.464 +06:00 [DBG] Connection id "0HNGRP86HKGOD" received FIN.
+2025-11-05 00:34:47.493 +06:00 [DBG] Connection id "0HNGRP86HKGOD" is closed. The last processed stream ID was 1.
+2025-11-05 00:34:47.493 +06:00 [DBG] The connection queue processing loop for 0HNGRP86HKGOD completed.
+2025-11-05 00:34:47.500 +06:00 [DBG] Connection id "0HNGRP86HKGOD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-05 00:34:47.509 +06:00 [DBG] Connection id "0HNGRP86HKGOD" stopped.

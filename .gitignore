@@ -1,0 +1,69 @@
+# ==========================
+# Visual Studio / IDE Files
+# ==========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ==========================
+# Build / Output folders
+# ==========================
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# ==========================
+# Rider / ReSharper
+# ==========================
+.idea/
+*.DotSettings.user
+
+# ==========================
+# ASP.NET / .NET Core
+# ==========================
+*.dbmdl
+*.pdb
+*.dll
+*.exe
+*.cache
+*.log
+*.vsix
+*.vsixmanifest
+*.nupkg
+*.nuspec
+*.snupkg
+
+# ==========================
+# Entity Framework / Migrations
+# ==========================
+*.ModelSnapshot.cs
+
+# ==========================
+# Node / Angular
+# ==========================
+node_modules/
+dist/
+tmp/
+*.log
+.angular/
+.angular-cli.json
+
+# ==========================
+# Angular / VS Code
+# ==========================
+.vscode/
+.env
+*.tsbuildinfo
+
+# ==========================
+# Others / OS files
+# ==========================
+Thumbs.db
+.DS_Store
+*.swp
+*.bak
+*.tmp

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qt4OsjymqqW8ZbtxNrvuI8JRE4ixXEUG1QDJFPb7tgzAsrRo+zDNoCoaPg9Y2fxb0mJ0C4yKrXCZdiPc/fHCtA==",
+  "dgSpecHash": "rojclglGK5c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\smriad\\Documents\\GitHub\\CityInfo\\CityInfo.API\\CityInfo.API\\CityInfo.API.csproj",
+  "projectFilePath": "D:\\GitHub\\CityInfo\\CityInfo.API\\CityInfo.API\\CityInfo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smriad\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\smriad\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -63,45 +63,48 @@ namespace CityInfo.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser(UserForCreationDto userObj)
         {
-            if(userObj == null)
+            try
             {
-                return BadRequest();
+                if (userObj == null)
+                {
+                    return BadRequest();
+                }
+
+                var user = await _cityInfoRepository.UserExistAsync(userObj.userName);
+                if (user)
+                {
+                    return BadRequest(new { Message = "User Name Already Exist" });
+                }
+
+                var mail = await _cityInfoRepository.EmailExistAsync(userObj.email);
+
+                if (mail)
+                {
+                    return BadRequest(new { Message = "Email Already Exist" });
+                }
+                var pass = _cityInfoRepository.CheckPasswordStrength(userObj.password);
+
+                if (!string.IsNullOrEmpty(pass))
+                {
+                    return BadRequest(new { Message = pass });
+                }
+                userObj.password = PasswordHasher.HashPassword(userObj.password);
+
+                var finalUSerDetails = _mapper.Map<User>(userObj);
+
+                finalUSerDetails.token = "Test token";
+
+                await _cityInfoRepository.AddNewUserAsync(finalUSerDetails);
+
+                await _cityInfoRepository.SaveChangesAsync();
+
+                return Ok(finalUSerDetails);
             }
-
-            
-
-            var user = await _cityInfoRepository.UserExistAsync(userObj.userName);
-            if (user)
+            catch (Exception ex)
             {
-                return BadRequest(new { Message = "User Name Already Exist" });
+                // Optionally log the exception here
+                return StatusCode(500, new { Message = "An error occurred while registering the user.", Details = ex.Message });
             }
-
-            var mail = await _cityInfoRepository.EmailExistAsync(userObj.email);
-
-            if (mail)
-            {
-                return BadRequest(new { Message = "Email Already Exist" });
-            }
-            var pass = _cityInfoRepository.CheckPasswordStrength(userObj.password);
-
-            if(!string.IsNullOrEmpty(pass))
-            {
-                return BadRequest(new {Message = pass});
-            }
-            userObj.password = PasswordHasher.HashPassword(userObj.password);
-
-            var finalUSerDetails = _mapper.Map<User>(userObj);
-
-
-            await _cityInfoRepository.AddNewUserAsync(finalUSerDetails);
-
-            await _cityInfoRepository.SaveChangesAsync();
-
-            return Ok(finalUSerDetails);
-
-
-
-
         }
     }
 }
